@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Mercadito - Proyecto Final JS TTA 2024 2C</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <header>
+            <div class="iconos-encabezado contEnca">
+                <div class="iconosI">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="menuH" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                </div>
+                <div class="logoM">
+                    <a href="index.html"><img src="img/Mercadito-Behance.png" alt="Mercadito" height="40"></a>
+                </div>
+                <div class="iconosD">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="userE" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="cartE" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                    </svg>
+                </div>
+            </div>
+            <nav class="menu-navegacion contEnca">
+                <div class="enlaces">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="carrito.html">Carrito</a>
+                    <a href="opiniones.html">Opiniones</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div class="grilla-contactos fondo-contactos">
+                <div class="contenedor-contactos anhelo">
+                    <p>nuestra visión</p>
+                    <video controls src="./img/Visita_Comunidad_Guarani.mp4" width="80%"></video>
+                    <p>Comunidad Guaraní de Misiones, Argentina</p>
+                </div>
+                <div class="contenedor-contactos formulario">
+                    <p>Contacto</p>
+                    <form class="formulario-contacto" action="https://formspree.io/f/xpwzdjgv" method="POST">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+    
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+    
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+    
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div class="contenedor-contactos direccion">
+                    <br>
+                    CP 1825 - Pacheco 1800 - Villa Urquiza <i class="fa-solid fa-location-dot"></i>
+                    <p>Ciudad Autónoma de Buenos Aires - Argentina</p>
+                    <i class="fa-solid fa-phone"></i>  (+54 911) 6622-4455
+                    <p>Lu-Vi de 0900 a 19:00 hs</p>
+                    <div class="redes">
+                        <i class="fa-brands fa-facebook-f"></i>   
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <!-- <i class="fa-brands fa-linkedin-in"></i> -->
+                        <i class="fa-brands fa-tiktok"><p>Mercadito</p></i>
+                        <i class="fa-brands fa-snapchat"></i>
+                        <i class="fa-brands fa-discord"></i>
+                        <i class="fa-brands fa-twitch"></i>
+                    </div>
+                </div>
+                <div class="contenedor-contactos ubicacion">
+                    <iframe id="Pacheco1800CABA" title="Pacheco1800CABA"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.0190165752915!2d-58.48047178898059!3d-34.578385372850555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb66efabfa8a7%3A0xbbc278541e48f6c8!2sC.%20Pacheco%201800%2C%20C1431%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1731181666430!5m2!1ses-419!2sar">
+                    </iframe>
+                </div>   
+            </div>
+        </main>
+
+        <footer>
+            <div class="pie-pagina contPie">
+                <p>Ricardo Balsimelli - #24225</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        <script src="js/funcionesProductos.js"></script>
+        <script src="js/funcionesCarrito.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+    
+</html>
