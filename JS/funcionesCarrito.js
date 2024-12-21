@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () =>
     const totalgeneral = document.getElementById('total');
     let total = 0;
 
- 
     // Cargar productos en la tabla del carrito
     carritoItemsStorage.forEach(item => 
     {
