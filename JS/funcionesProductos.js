@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () =>
   
     //estan variables se utilizan para ver la pagina actual, la cantidad de elementos a mostrar y el total de elementos.
     let currentPage = 1;
-    const limit = 20;
+    // const limit = 20;
     let totalProductos = 0;
   
     // function fetchProductos(page) 
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () =>
       // const skip = (page - 1) * limit;
   
       //fetch(`https://dummyjson.com/products?limit=${limit}&skip=${skip}`)
-      fetch(`https://dummyjson.com/products?limit=20`)
+      fetch(`https://dummyjson.com/products/category/groceries`)
         .then((response) => response.json())
         .then((data) => {
           totalProductos = data.total;
@@ -59,9 +59,9 @@ document.addEventListener("DOMContentLoaded", () =>
           });
   
   
-          pageInfo.textContent = `Page ${currentPage}`;          
-          prevBtn.disabled = currentPage === 1;
-          nextBtn.disabled = (currentPage * limit) >= totalProductos;
+          // pageInfo.textContent = `Page ${currentPage}`;          
+          // prevBtn.disabled = currentPage === 1;
+          // nextBtn.disabled = (currentPage * limit) >= totalProductos;
   
   
   
@@ -75,26 +75,36 @@ document.addEventListener("DOMContentLoaded", () =>
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart.push(product);
       localStorage.setItem("cart", JSON.stringify(cart));
-      alert(`${product.title} ha sido agregado al carrito!`);
+      // alert(`${product.title} ha sido agregado al carrito!`);
+      swal.fire({
+        icon: 'success',
+        title: `${product.title}`,
+        text: "agregado al carrito",
+        showConfirmButton: true,
+        confirmButtonText: "Cerrar",
+        timer: 4000,
+        timerProgressBar: true,
+        toast: true
+        }); 
     }
   
-      prevBtn.addEventListener("click", () => 
-        {
-        if (currentPage > 1) {
-            currentPage--;
-            fetchProductos(currentPage);
-        }
-        });
+      // prevBtn.addEventListener("click", () => 
+      //   {
+      //   if (currentPage > 1) {
+      //       currentPage--;
+      //       fetchProductos(currentPage);
+      //   }
+      //   });
   
   
-      nextBtn.addEventListener("click", () => 
-        {
-        if ((currentPage * limit) < totalProductos) 
-          {
-            currentPage++;
-            fetchProductos(currentPage);
-        }
-        });
+      // nextBtn.addEventListener("click", () => 
+      //   {
+      //   if ((currentPage * limit) < totalProductos) 
+      //     {
+      //       currentPage++;
+      //       fetchProductos(currentPage);
+      //   }
+      //   });
   
   
   

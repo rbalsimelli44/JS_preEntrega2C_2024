@@ -42,11 +42,16 @@ document.addEventListener("DOMContentLoaded", () =>
     // Mostrar el total
     totalgeneral.textContent = total.toFixed(2);
 
-    // Botón para limpiar el carrito y volver al inicio
+    // Botón para ir a seguir comprando
+    document.getElementById('seguir-comprando').addEventListener('click', () => 
+    {
+        window.location.href = 'productos.html'; 
+    });
+
+    // Botón para limpiar el carrito
     document.getElementById('limpiar-carrito').addEventListener('click', () => 
     {
         localStorage.removeItem('cart'); 
-        window.location.href = 'index.html'; 
     });
 
     // Botón para finalizar la compra con sweet Alert
@@ -56,7 +61,10 @@ document.addEventListener("DOMContentLoaded", () =>
             title: 'Compra Procesada',
             text: 'Se ha procesado la compra #1200',
             icon: 'success',
-            confirmButtonText: 'Aceptar'
+            confirmButtonText: 'Aceptar',
+            timer: 4000,
+            timerProgressBar: true,
+            toast: true
         });
 
         // Limpiar el carrito después de finalizar la compra
